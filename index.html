@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Logan.</title>
+<style>
+:root{--ink:#0f0f12; --sub:#6b6f76; --paper:#0a0a0d;
+--card:#14141a; --line:#24242c; --acc:#ff3e6c; --glow:#ff3e6c33;}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;scroll-behavior:smooth}
+body{font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+background: radial-gradient(1200px 600px at 20% -10%, #1f1f27 0%, #0a0a0d 50%), #0a0a0d;
+color:#e8e9ed; line-height:1.6}
+a{color:#fff;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+/* NAV */
+.nav{position:sticky;top:0;z-index:8;backdrop-filter:saturate(140%) blur(6px);
+background:#0a0a0db3;border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:.6rem;padding:.8rem 0}
+.logo{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#ff6a88,#ff3e6c);
+box-shadow:0 0 24px var(--glow)}
+.brand span{font-weight:800;letter-spacing:.3px}
+.nav a.link{padding:1rem .65rem;color:#d9dbe0}
+.nav a.link:hover{color:#fff}
+/* HERO */
+.hero{padding:74px 0 46px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(36px,6vw,64px);line-height:1.05;margin:0 0 10px}
+.hero p{color:#c8c9cf;margin:0 0 22px;max-width:740px}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:12px}
+.chip{border:1px solid #ffffff1f;padding:.4rem .7rem;border-radius:999px;color:#cfd1d6}
+.cta{display:flex;gap:12px;margin-top:18px}
+.btn{display:inline-block;padding:.85rem 1.05rem;border-radius:10px;font-weight:700}
+.btn.primary{background:linear-gradient(135deg,#ff6a88,#ff3e6c);box-shadow:0 10px 28px -12px var(--glow)}
+.btn.ghost{border:1px solid #ffffff22;color:#e8e9ed}
+/* GRID SECTIONS */
+section{padding:46px 0;border-bottom:1px solid var(--line)}
+h2{font-size:1.15rem;letter-spacing:.8px;text-transform:uppercase;color:#cfd1d6;margin:0 0 16px}
+.cards{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{grid-column:span 12;background:var(--card);border:1px solid var(--line);
+border-radius:14px;padding:18px}
+.card h3{margin:2px 0 10px}
+.muted{color:var(--sub)}
+.badge{display:inline-block;font-size:.8rem;padding:.25rem .5rem;border:1px solid #ffffff22;border-radius:6px;color:#cfd1d6}
+/* Profile facts */
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:6px}
+.facts div{background:#16161d;border:1px solid var(--line);padding:12px;border-radius:10px}
+.facts b{display:block;color:#adb0b8;font-size:.8rem}
+/* Reviews */
+.reviews p{margin:.4rem 0}
+.stars{color:#ffb400;font-size:1.05rem}
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;border:1px solid var(--line);
+transition:transform .2s, box-shadow .2s}
+.gallery img:hover{transform:translateY(-2px);box-shadow:0 18px 40px -24px var(--glow)}
+/* Footer */
+footer{padding:30px 0;color:#bfc2c9;text-align:center}
+/* Responsive */
+@media (max-width:780px){
+.gallery{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){
+.facts{grid-template-columns:1fr}
+.gallery{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav">
+<div class="wrap">
+<div class="brand"><div class="logo"></div><span>Logan.</span></div>
+<div>
+<a class="link" href="#profile">Profile</a>
+<a class="link" href="#about">About</a>
+<a class="link" href="#reviews">Reviews</a>
+<a class="link" href="#gallery">Gallery</a>
+<a class="link" href="#contact">Apply</a>
+</div>
+</div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+<div class="wrap">
+<h1>Quiet confidence. Dry humor. Good company.<br><span style="color:#ff93ab">Now accepting applications.</span></h1>
+<p>Not a brand. Not a performance. Just a solid human who likes smart plans, honest laughs, and the right people.
+If that sounds like your speed, you’re in the right place.</p>
+<div class="chips">
+<span class="chip">6'1"</span>
+<span class="chip">Cody, WY → Elkhorn, NE</span>
+<span class="chip">Drinks: No</span>
+<span class="chip">Smokes: Occasionally</span>
+<span class="chip">Maps • Chess • Travel • Live Music</span>
+</div>
+<div class="cta">
+<a class="btn primary" href="#contact">Apply to Date Logan.</a>
+<a class="btn ghost" href="#resume">View Reviews</a>
+</div>
+</div>
+</header>
+
+<main>
+
+<!-- PROFILE -->
+<section id="profile">
+<div class="wrap">
+<h2>Profile</h2>
+<div class="cards">
+<article class="card">
+<div class="facts">
+<div><b>Hometown</b> Cody, Wyoming</div>
+<div><b>Current City</b> Elkhorn, Nebraska</div>
+<div><b>Height</b> 6’1”</div>
+<div><b>Born</b> 1995</div>
+<div><b>Occupation</b> Automotive Strategy & Operations</div>
+<div><b>Education</b> The University of Oklahoma — B.B.A. ’18</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="wrap">
+<h2>About</h2>
+<div class="cards">
+<article class="card">
+<p>I like good timing, honest laughs, and plans that make sense. Small circle, big curiosities. If something’s worth doing, I’ll do it right. Introvert energy—just add the right people.</p>
+</article>
+</div>
+</div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+<div class="wrap">
+<h2>Dating Resume</h2>
+<div class="cards">
+<article class="card">
+<ul style="margin:8px 0 0 18px">
+<li><b>Strengths:</b> Dependable, unflappable, actually funny, follows through.</li>
+<li><b>Weaknesses:</b> Golf (we’re working it out).</li>
+<li><b>Experience:</b> Showing up on time, reading the room, planning solid low-key nights.</li>
+<li><b>Interests:</b> Chess, golf, maps, travel, live music.</li>
+<li><b>Looking for:</b> Someone smart, kind, steady; laughs easily and means it.</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+<div class="wrap">
+<h2>Reviews</h2>
+<div class="cards">
+<article class="card reviews">
+<p><span class="stars">★★★★★</span> “The complete package.” — Everyone’s aunt</p>
+<p><span class="stars">★★★★★</span> “How is he single?” — Group chat</p>
+<p><span class="stars">★★★★★</span> “Listens first. Rare.” — First date, verified</p>
+<p><span class="stars">★★★★½</span> “Only leaving 4.5 stars because he sets the bar too high.” — Ashley, Bumble User</p>
+<p><span class="stars">★★★★★</span> “Moms love him.” — Universal consensus</p>
+</article>
+</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<div class="wrap">
+<h2>Gallery</h2>
+<div class="gallery">
+<img src="photo1.jpg" alt="Photo 1">
+<img src="photo2.jpg" alt="Photo 2">
+<img src="photo3.jpg" alt="Photo 3">
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="wrap">
+<h2>Apply</h2>
+<div class="cards">
+<article class="card">
+<p><span class="badge">Logan LLC. Applicant Portal</span></p>
+<p><strong>Applications now open.</strong></p>
+<p>Submit via <a href="mailto:youremail@example.com">email</a> or phone call. I probably won’t answer and you’ll hit voicemail. Sorry. I’ll call you back.</p>
+<p><a class="btn primary" href="#terms">View Terms & Conditions</a></p>
+</article>
+</div>
+</div>
+</section>
+
+<!-- TERMS -->
+<section id="terms">
+<div class="wrap">
+<h2>Terms & Conditions</h2>
+<div class="cards">
+<article class="card fineprint">
+<p><strong>Logan LLC.</strong> sets forth the following legally binding Terms & Conditions for all Applicants. By initiating contact, you agree to be bound by these provisions in their entirety.</p>
+
+<h3>1. Eligibility</h3>
+<p>Applicants must be legally single, age 25 or older, and capable of entering consensual interpersonal relationships. Applicants must not be involved in unresolved legal disputes or financial insolvency proceedings that materially impair their ability to engage responsibly.</p>
+
+<h3>2. Application Process</h3>
+<p>Applications are accepted via email or voicemail. Text messages may be disregarded at Logan LLC.’s sole discretion. Voicemails exceeding three minutes may not be reviewed. Multiple applications within a seven-day period may result in reduced consideration.</p>
+
+<h3>3. Communication</h3>
+<p>Logan LLC. may screen calls, delay responses, or decline to respond without explanation. Applicants are encouraged to leave clear voicemails. Failure to articulate purpose may result in disqualification.</p>
+
+<h3>4. Conduct Standards</h3>
+<p>Applicants shall maintain reasonable standards of behavior. Examples include punctuality, accuracy in representations, and consistent follow-through. Repeated failures to meet reasonable expectations may result in termination of consideration.</p>
+
+<h3>5. Confidentiality</h3>
+<p>All Applicant submissions may be stored for internal review. Logan LLC. will not intentionally disclose Applicant information except as legally required. Applicants are advised not to transmit sensitive government identifiers.</p>
+
+<h3>6. Dispute Resolution</h3>
+<p>All disputes shall be resolved under Nebraska law, venue in Douglas County courts. Arbitration is not provided. Applicants waive any right to trial by jury regarding application outcomes.</p>
+
+<h3>7. Termination</h3>
+<p>Logan LLC. may terminate consideration at any stage for any reason. Applicants terminated from consideration are barred from reapplication for a minimum of 90 days, unless expressly invited to reapply.</p>
+
+<h3>8. Miscellaneous</h3>
+<p>If any provision herein is held unenforceable, the remaining provisions shall remain effective. These Terms represent the entire agreement between Logan LLC. and the Applicant.</p>
+</article>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+<p>© 2025 Logan LLC.</p>
+</div>
+</footer>
+
+</body>
+</html>
