@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Logan.</title>
+<title>Logan LLC</title>
 <style>
-:root{--ink:#0f0f12; --sub:#6b6f76; --paper:#0a0a0d;
+:root{
+--ink:#0f0f12; --sub:#6b6f76; --paper:#0a0a0d;
 --card:#14141a; --line:#24242c; --acc:#ff3e6c; --glow:#ff3e6c33;}
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;scroll-behavior:smooth}
@@ -14,7 +15,6 @@ background: radial-gradient(1200px 600px at 20% -10%, #1f1f27 0%, #0a0a0d 50%), 
 color:#e8e9ed; line-height:1.6}
 a{color:#fff;text-decoration:none}
 .wrap{max-width:1000px;margin:0 auto;padding:0 18px}
-/* NAV */
 .nav{position:sticky;top:0;z-index:8;backdrop-filter:saturate(140%) blur(6px);
 background:#0a0a0db3;border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between}
@@ -24,7 +24,6 @@ box-shadow:0 0 24px var(--glow)}
 .brand span{font-weight:800;letter-spacing:.3px}
 .nav a.link{padding:1rem .65rem;color:#d9dbe0}
 .nav a.link:hover{color:#fff}
-/* HERO */
 .hero{padding:74px 0 46px;border-bottom:1px solid var(--line)}
 .hero h1{font-size:clamp(36px,6vw,64px);line-height:1.05;margin:0 0 10px}
 .hero p{color:#c8c9cf;margin:0 0 22px;max-width:740px}
@@ -34,35 +33,25 @@ box-shadow:0 0 24px var(--glow)}
 .btn{display:inline-block;padding:.85rem 1.05rem;border-radius:10px;font-weight:700}
 .btn.primary{background:linear-gradient(135deg,#ff6a88,#ff3e6c);box-shadow:0 10px 28px -12px var(--glow)}
 .btn.ghost{border:1px solid #ffffff22;color:#e8e9ed}
-/* GRID SECTIONS */
 section{padding:46px 0;border-bottom:1px solid var(--line)}
 h2{font-size:1.15rem;letter-spacing:.8px;text-transform:uppercase;color:#cfd1d6;margin:0 0 16px}
 .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
 .card{grid-column:span 12;background:var(--card);border:1px solid var(--line);
 border-radius:14px;padding:18px}
-.card h3{margin:2px 0 10px}
 .muted{color:var(--sub)}
 .badge{display:inline-block;font-size:.8rem;padding:.25rem .5rem;border:1px solid #ffffff22;border-radius:6px;color:#cfd1d6}
-/* Profile facts */
 .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:6px}
 .facts div{background:#16161d;border:1px solid var(--line);padding:12px;border-radius:10px}
 .facts b{display:block;color:#adb0b8;font-size:.8rem}
-/* Reviews */
 .reviews p{margin:.4rem 0}
 .stars{color:#ffb400;font-size:1.05rem}
-/* Gallery */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;border:1px solid var(--line);
+.gallery img{width:100%;height:380px;object-fit:cover;border-radius:12px;border:1px solid var(--line);
 transition:transform .2s, box-shadow .2s}
 .gallery img:hover{transform:translateY(-2px);box-shadow:0 18px 40px -24px var(--glow)}
-/* Footer */
 footer{padding:30px 0;color:#bfc2c9;text-align:center}
-/* Responsive */
-@media (max-width:780px){
-.gallery{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){
-.facts{grid-template-columns:1fr}
-.gallery{grid-template-columns:1fr}}
+@media (max-width:780px){.gallery{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.facts{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -70,10 +59,10 @@ footer{padding:30px 0;color:#bfc2c9;text-align:center}
 <!-- NAV -->
 <div class="nav">
 <div class="wrap">
-<div class="brand"><div class="logo"></div><span>Logan.</span></div>
+<div class="brand"><div class="logo"></div><span>Logan LLC</span></div>
 <div>
-<a class="link" href="#profile">Profile</a>
 <a class="link" href="#about">About</a>
+<a class="link" href="#resume">Resume</a>
 <a class="link" href="#reviews">Reviews</a>
 <a class="link" href="#gallery">Gallery</a>
 <a class="link" href="#contact">Apply</a>
@@ -85,42 +74,22 @@ footer{padding:30px 0;color:#bfc2c9;text-align:center}
 <header class="hero">
 <div class="wrap">
 <h1>Quiet confidence. Dry humor. Good company.<br><span style="color:#ff93ab">Now accepting applications.</span></h1>
-<p>Not a brand. Not a performance. Just a solid human who likes smart plans, honest laughs, and the right people.
-If that sounds like your speed, you’re in the right place.</p>
+<p>Not a brand. Not a performance. Just a solid human who likes smart plans, honest laughs, and the right people. If that sounds like your speed, you’re in the right place.</p>
 <div class="chips">
 <span class="chip">6'1"</span>
 <span class="chip">Cody, WY → Elkhorn, NE</span>
 <span class="chip">Drinks: No</span>
-<span class="chip">Smokes: Occasionally</span>
-<span class="chip">Maps • Chess • Travel • Live Music</span>
+<span class="chip">Smokes: No</span>
+<span class="chip">Chess • Motorcycles • Cars • Live Music</span>
 </div>
 <div class="cta">
-<a class="btn primary" href="#contact">Apply to Date Logan.</a>
-<a class="btn ghost" href="#resume">View Reviews</a>
+<a class="btn primary" href="#contact">Apply to Date Logan</a>
+<a class="btn ghost" href="#resume">View Dating Resume</a>
 </div>
 </div>
 </header>
 
 <main>
-
-<!-- PROFILE -->
-<section id="profile">
-<div class="wrap">
-<h2>Profile</h2>
-<div class="cards">
-<article class="card">
-<div class="facts">
-<div><b>Hometown</b> Cody, Wyoming</div>
-<div><b>Current City</b> Elkhorn, Nebraska</div>
-<div><b>Height</b> 6’1”</div>
-<div><b>Born</b> 1995</div>
-<div><b>Occupation</b> Automotive Strategy & Operations</div>
-<div><b>Education</b> The University of Oklahoma — B.B.A. ’18</div>
-</div>
-</article>
-</div>
-</div>
-</section>
 
 <!-- ABOUT -->
 <section id="about">
@@ -128,7 +97,7 @@ If that sounds like your speed, you’re in the right place.</p>
 <h2>About</h2>
 <div class="cards">
 <article class="card">
-<p>I like good timing, honest laughs, and plans that make sense. Small circle, big curiosities. If something’s worth doing, I’ll do it right. Introvert energy—just add the right people.</p>
+<p>Heyyy, I’m Logan. I know who I am and what I bring — consistency, punchlines that hit like a freight train, and a 6 inch heart. In short: high return, low risk, limited availability.</p>
 </article>
 </div>
 </div>
@@ -141,10 +110,10 @@ If that sounds like your speed, you’re in the right place.</p>
 <div class="cards">
 <article class="card">
 <ul style="margin:8px 0 0 18px">
-<li><b>Strengths:</b> Dependable, unflappable, actually funny, follows through.</li>
-<li><b>Weaknesses:</b> Golf (we’re working it out).</li>
-<li><b>Experience:</b> Showing up on time, reading the room, planning solid low-key nights.</li>
-<li><b>Interests:</b> Chess, golf, maps, travel, live music.</li>
+<li><b>Strengths:</b> Dependable, level-headed, hilarious, consistent.</li>
+<li><b>Weaknesses:</b> Golf. Why is it always golf?</li>
+<li><b>Experience:</b> Years of showing up, keeping things steady, and making the ordinary feel memorable.</li>
+<li><b>Interests:</b> Chess, motorcycles, cars, golf (again), video games, reading, potentially you??</li>
 <li><b>Looking for:</b> Someone smart, kind, steady; laughs easily and means it.</li>
 </ul>
 </article>
@@ -161,8 +130,10 @@ If that sounds like your speed, you’re in the right place.</p>
 <p><span class="stars">★★★★★</span> “The complete package.” — Everyone’s aunt</p>
 <p><span class="stars">★★★★★</span> “How is he single?” — Group chat</p>
 <p><span class="stars">★★★★★</span> “Listens first. Rare.” — First date, verified</p>
-<p><span class="stars">★★★★½</span> “Only leaving 4.5 stars because he sets the bar too high.” — Ashley, Bumble User</p>
+<p><span class="stars">★★★½☆</span> “Would’ve been 5 stars but he said ‘thanks’ to Siri.” — Ashley, Bumble User</p>
 <p><span class="stars">★★★★★</span> “Moms love him.” — Universal consensus</p>
+<p><span class="stars">★★★★★</span> “Honestly ruined the curve for the rest of us.” — Former coworker</p>
+<p><span class="stars">★★★★★</span> “Better than advertised. Would date again.” — Anonymous survey respondent</p>
 </article>
 </div>
 </div>
@@ -177,7 +148,6 @@ If that sounds like your speed, you’re in the right place.</p>
 <img src="photo2.jpg" alt="Photo 2">
 <img src="photo3.jpg" alt="Photo 3">
 </div>
-</div>
 </section>
 
 <!-- CONTACT -->
@@ -186,15 +156,28 @@ If that sounds like your speed, you’re in the right place.</p>
 <h2>Apply</h2>
 <div class="cards">
 <article class="card">
-<p><span class="badge">Logan LLC. Applicant Portal</span></p>
+<p><span class="badge">Logan LLC Applicant Portal</span></p>
 <p><strong>Applications now open.</strong></p>
-<p>Submit via <a href="mailto:youremail@example.com">email</a> or phone call. I probably won’t answer and you’ll hit voicemail. Sorry. I’ll call you back.</p>
+<p>Apply via email or phone call. If I don’t answer, congratulations — you’ve completed stage one of the application process.</p>
 <p><a class="btn primary" href="#terms">View Terms & Conditions</a></p>
 </article>
 </div>
 </div>
 </section>
 
+<!-- CONTACT INFO -->
+<section id="contact-info">
+<div class="wrap">
+<h2>Contact</h2>
+<div class="cards">
+<article class="card">
+<p><b>Email:</b> <a href="mailto:loganllc.applications@gmail.com">loganllc.applications@gmail.com</a></p>
+<p><b>Phone:</b> <a href="tel:+14024039703">(402) 403-9703</a></p>
+</article>
+</div>
+</div>
+</section>
+  
 <!-- TERMS -->
 <section id="terms">
 <div class="wrap">
@@ -241,3 +224,11 @@ If that sounds like your speed, you’re in the right place.</p>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
